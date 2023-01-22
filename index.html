@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" >
+        <meta name="viewport" content="width=device-width, initial-scale=1" >
+		<title>Bellory Pizza</title>
+		<meta name="author" content="Layla de Souza Barbosa" >
+		<meta name="description" content="landing page to a pizzaria for a form to order pizza online as required for assignment 1 in HTML, CSS and Javascript course">
+
+		<!--<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" >-->
+		<link rel="shortcut icon" href="images/pizza-icon.jpg" type="image/x-icon" />
+		<link rel="stylesheet" href="css/styles.css" >
+	</head>
+	<body>
+		<!-- Page-level header -->
+		<header id="header">
+			<h1 id="header-h1">Bellory Pizza</h1>
+			<h3 id="header-h3">Best Brazillian Pizza in Toronto</h3>
+			<nav id="navigation">
+			<ul>
+				<li><a href="#">About Us</a></li>
+				<li><a class="order" href="order.html"> Order here</a></li>
+				<li><a href="#">Contact</a></li>
+			  </ul>
+			</nav>
+		</header>
+		<!-- Page-level main content -->
+		<main>
+			<section>
+				<!--Information about the store-->
+				<h2>About Us</h2>
+					<article>
+						<h3>Our Ingredients are proudly canadian</h3>
+						<!--wraped the image and paragraphs in a div so they remain side by side when I used the float property-->
+						<div>
+							<img src="images/ingredients.jpg" width="370" height="556" alt="ingredients in a wood table">
+							<p>We value and favour local producers, that way we can assure better quality while supporting our comunity</p>
+						</div>
+					</article>
+					
+					<article>
+						<h3>Our roots are Brazilian</h3>
+						<div>
+							<img src="images/brazilian-pizza.jpg" width="624" height="416" alt="pizza with brazillian quote">
+							<p>Mixing the best of both countries, we keep our ties with brazilian cooking. Wood woven and baking in such way that you take you straight back to <em> borda recheada*</em></p>
+						</div>
+							<p><small>*Brazillian way of having stuffed edge pizza</small></p>
+						</article>
+					<article>
+						<h3>Craft your pizza as you wish</h3>
+						<div>
+							<img src="images/craft-pizza.jpg" width="383" height="575" alt="a hand cutting artesanal pizza">
+							<p>Nothing more tastefull then choose each ingredient of your pizza to achieve the most delightful bite.</p>
+						</div>
+					</article>
+			</section>
+
+			<!-- Side Notes / Related Information -->
+			<aside>
+				<!-- Newsletter Subscribe Form -->
+				<h4 class="new-feature">Subscribe to our Newsletter to get coupons</h4>
+			
+				<form action="" method="get">
+					<label for="name">Name</label>
+					<input type="text" name="name" id="name" required><br>
+					<label for="emailAddress">Email</label>
+					<input type="email" name="emailAddress" id="emailAddress" required ><br>
+					<label for="phone">Phone Number</label>
+					<input type="tel" name="phone" id="phone"><br>
+					<button id="submit-button" type="submit">Subscribe</button>
+				</form><br>
+				<!-- Order here button landing to order page-->
+				<div class="ord">
+					<a  href="order.html"> ORDER HERE</a>
+				</div>
+					
+			</aside>
+		</main>
+		<!-- Page-level footer -->
+		<footer>
+			<p>Contact us on the phone <address> <a href="tel:+16576853344">(657) 685-3344</a></address></p>
+		</footer>
+	</body>
+</html>

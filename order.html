@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" >
+        <!-- to make the site friendly to muliple size screens-->
+        <meta name="viewport" content="width=device-width, initial-scale=1" >
+		<title>Bellory Pizza</title>
+		<meta name="author" content="Layla de Souza Barbosa" >
+		<meta name="description" content="form to order pizza online as required for assignment 1 in HTML, CSS and Javascript course">
+
+		<!--<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" >-->
+		<link rel="shortcut icon" href="images/pizza-icon.jpg" type="image/x-icon" />
+		<link rel="stylesheet" href="css/ordering.css" >
+       
+	</head>
+	<body>
+		<!-- Page-level header -->
+		<header id="header">
+			<h1 id="header-h1">Bellory Pizza</h1>
+			<h3 id="header-h3">Best Brazillian Pizza in Toronto</h3>
+			<nav id="navigation">
+			<ul>
+				<li><a href="index.html">About Us</a></li>
+				<li><a href="#"> Order here</a></li>
+				<li><a href="#">Contact</a></li>
+			  </ul>
+			</nav>
+		</header>
+		<!-- Page-level main content -->
+		<main>
+            <!-- News Section -->
+            <section>
+                <h2 class="warning">Please be advised, we only work with take out!</h2>
+            </section>
+            <!--Ordering pizza form-->
+			<form action="" method="get" action="wait.html" class="order-form">
+        
+                <!--Asking the user for contact information-->
+				<label for="name">Name</label>
+				<input type="text" name="name" id="name" required><br>
+
+				<label for="emailAddress">Email</label>
+				<input type="email" name="emailAddress" id="emailAddress" required ><br>
+
+				<label for="phone">Phone Number</label>
+				<input type="tel" name="phone" id="phone"><br>
+
+                <!--Selecting number of pizzas for order with length attribute-->
+                <label for="pizza-number">How many pizzas are you craving for?</label>
+				<input type="number" name="pizza-number" id="pizza-number" min="1" max="10"><br>
+
+                <!--Chosing the pizza style using rage button-->
+                <div class="style">
+                    <label for="pizza-style">Wich style would you like?</label>
+                    <figure>
+                        <img src="images/regular-edge.jpg" id="image-1" width="200" height="200" alt="regular edge pizza">
+                        <figcaption>Regular edge</figcaption>
+                    </figure>
+                    <input type="range" class="style-range" id="pizza-style" name="pizza-style" min="1" max="2">
+                    <figure>
+                        <img src="images/stuffed-edge.jpg" id="image-2" width="200" height="200" alt="stuffed-edge pizza">
+                        <figcaption>Stuffed edge with cream cheese</figcaption>
+                    </figure>
+                </div><br>
+
+                <!--Using fieldset + radio button to choose the size of pizza-->
+                <fieldset>
+                    <legend>What size is your party?</legend>
+                    <div>
+                      <input type="radio" id="small" name="pizza-size" value="small">
+                      <label for="small">Small - 6 pieces</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="medium" name="pizza-size" value="medium">
+                        <label for="medium">Medium - 8 pieces</label>
+                      </div>
+                      <div>
+                        <input type="radio" id="large" name="pizza-size" value="large">
+                        <label for="large">Large - 10 pieces</label>
+                      </div>
+                      <div>
+                        <input type="radio" id="x-large" name="pizza-size" value="x-large">
+                        <label for="x-large">X-large- 8 pieces</label>
+                      </div>
+                </fieldset>
+
+                <!--Using select option to choose dough style -->
+                <div class="dough">
+                    <label for="dough-type">Choose your dough</label>
+                    <select id="dough-type">
+                        <option value="">--Please choose an option--</option>
+                        <option value="traditional">Traditional Neapolitan</option>
+                        <option value="gluten-free">Gluten free</option>
+                        <option value="wheat">Whole wheat</option>
+                        <option value="detroid">Detroid style</option>
+                        <option value="ny">New York style</option>
+                    </select>
+                </div><br>
+
+                <!--Using checkn=boxes to let the user pick the toppings, no limit defined-->
+                <fieldset>
+                    <legend>Choose your toppings</legend>
+                    <p><small>Please, fell free to choose as many as you want </small></p>
+
+                    <!--cheese toppings-->
+                    <div>
+                        <input type="checkbox" id="goat" name="cheese-toppings" >
+                        <label for="goat">Goat cheese</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="parmigianno" name="cheese-toppings" >
+                        <label for="parmigianno">Parmigianno</label>
+                    </div><div>
+                        <input type="checkbox" id="blue-cheese" name="cheese-toppings" >
+                        <label for="blue-cheese">Blue cheese</label>
+                    </div><div>
+                        <input type="checkbox" id="goat" name="cheese-toppings" >
+                        <label for="goat">Goat Cheese</label>
+                    </div><div>
+                        <input type="checkbox" id="flor-di-latte" name="cheese-toppings" >
+                        <label for="flor-di-latte">Flor-di-latte</label>
+                    </div><div>
+                        <input type="checkbox" id="mozzarella" name="cheese-toppings" >
+                        <label for="mozzarella">Mozzarella</label>
+                    </div>
+                
+                    <!--meat toppings-->
+                    <div>
+                      <input type="checkbox" id="sopressata" name="meat-toppings" >
+                      <label for="sopressata">Sopressata</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="bacon" name="meat-toppings" >
+                        <label for="bacon">Bacon</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="ham" name="meat-toppings" >
+                        <label for="ham">Cooked ham-extra lean <small>(brazillian taste)</small></label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="prosciutto" name="meat-toppings" >
+                        <label for="prosciutto">Prosciutto</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="roast-chicken" name="meat-toppings" >
+                        <label for="roast-chicken">Roast chicken</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="shredded-chicken" name="meat-toppings">
+                        <label for="shredded-chicken">Shredded chicken <small>(brazillian taste)</small></label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="back-bacon" name="meat-toppings" >
+                        <label for="back-bacon">Back-bacon/Lombinho Canadense <small>(brazillian taste)</small></label>
+                    </div>
+
+                    <!--veggie toppings-->
+                    <div>
+                        <input type="checkbox" id="onion" name="veggie-toppings" >
+                        <label for="onion">Onion</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="peppers" name="veggie-toppings" >
+                        <label for="peppers">Peppers</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="mushrom" name="veggie-toppings" >
+                        <label for="mushrom">Mushrom</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="olives" name="veggie-toppings" >
+                        <label for="olives">Green olives</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="black-olives" name="veggie-toppings" >
+                        <label for="black-olives">Black olives</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="tomatos" name="veggie-toppings" >
+                        <label for="tomatos">Tomatos</label>
+                    </div>
+
+                    <!--seasoning toppings-->
+                    <div>
+                        <input type="checkbox" id="parsley" name="seasoning-toppings" >
+                        <label for="parsley">Parsley</label>
+                    </div>   
+                    <div>
+                        <input type="checkbox" id="basil" name="seasoning-toppings" >
+                        <label for="basil">Basil</label>
+                    </div>
+                        <input type="checkbox" id="oregano" name="seasoning-toppings" >
+                        <label for="oregano">Oregano</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="pepper-flakes" name="seasoning-toppings" >
+                        <label for="pepper-flakes">Pepper flakes</label>
+                    </div>
+                </fieldset>
+                
+                <!--text area to let the user input any necessary information-->
+                <label for="observation">Do you have any special request? </label>
+                <textarea id="observation" name="observation" rows="8" cols="33"> we will try our best to respond to your solicitation.
+                </textarea>
+                
+                <!--Submit button-->
+                <button type="submit">Place your order</button>
+                    
+            </form>
+				
+		</main>
+		<!-- Page-level footer -->
+		<footer>
+			<p>Contact us on the phone <address> <a href="tel:+16576853344">(657) 685-3344</a></address></p>
+		</footer>
+	</body>
+</html>
